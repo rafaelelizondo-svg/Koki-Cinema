@@ -630,7 +630,76 @@ body {
 
   .paquete .boton {
     width: 100%;
-    text-align: center;
+text-align: center;
+  }
+
+}
+/* =========================
+   EQUIPO
+========================= */
+
+.equipo {
+  padding: 90px 8%;
+  background: #0b0b0b;
+}
+
+.equipo-contenido {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+  align-items: center;
+}
+
+.equipo-imagen img {
+  width: 100%;
+  display: block;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.equipo-texto h3 {
+  font-size: 30px;
+  line-height: 1.1;
+
+  margin-bottom: 20px;
+}
+
+.equipo-texto p {
+  color: #bdbdbd;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   EQUIPO EN CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+  .equipo {
+    padding: 70px 20px;
+  }
+
+  .equipo-contenido {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .equipo-texto h3 {
+    font-size: 25px;
   }
 
 }
