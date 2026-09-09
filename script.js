@@ -1,6 +1,10 @@
-  const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
+document.addEventListener("DOMContentLoaded", function () {
 
-menuBtn.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
+  const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.getElementById("navMenu");
+
+  menuBtn.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
 });
