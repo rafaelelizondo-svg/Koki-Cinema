@@ -779,3 +779,25 @@ text-align: center;
   }
 
 }
+/* =========================
+   IMAGEN DEL EQUIPO
+========================= */
+
+.equipo-imagen-unica {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.equipo-imagen-unica img {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  display: block;   
+  margin: 0 auto;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5);
+}
