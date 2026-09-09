@@ -1,0 +1,416 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: #ffffff;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezado {
+  height: 75px;
+  padding: 0 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(5, 5, 5, 0.95);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  position: relative;
+  z-index: 10;
+}
+
+.encabezado h1 {
+  font-size: 23px;
+  color: #ffffff;
+
+  letter-spacing: 2px;
+
+  font-weight: 800;
+}
+
+.menu {
+  background: transparent;
+  border: none;
+
+  color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.menu:hover {
+  color: #2196f3;
+  transform: scale(1.1);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 650px;
+
+  padding: 100px 8%;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      rgba(33, 150, 243, 0.22),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #050505 0%,
+      #0a0a0a 50%,
+      #101820 100%
+    );
+}
+
+
+/* efecto de luz cinematográfica */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -180px;
+  top: 50px;
+
+  background: rgba(33, 150, 243, 0.12);
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+}
+
+
+/* contenido */
+
+.contenido {
+  max-width: 650px;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* etiqueta */
+
+.etiqueta {
+  color: #ffcc00;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 25px;
+}
+
+
+/* título */
+
+.hero h2 {
+  font-size: clamp(45px, 7vw, 78px);
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+
+  margin-bottom: 30px;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+
+/* descripción */
+
+.descripcion {
+  max-width: 570px;
+
+  color: #bdbdbd;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  margin-bottom: 35px;
+}
+
+
+/* =========================
+   BOTÓN PRINCIPAL
+========================= */
+
+.boton {
+  display: inline-block;
+
+  background: #2196f3;
+
+  color: white;
+
+  padding: 17px 28px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  font-size: 15px;
+
+  letter-spacing: 0.5px;
+
+  box-shadow:
+    0 10px 30px rgba(33, 150, 243, 0.25);
+
+  transition: 0.3s;
+}
+
+.boton:hover {
+  background: #42a5f5;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(33, 150, 243, 0.4);
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+  display: inline-block;
+
+  margin-left: 18px;
+
+  color: #25d366;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+
+.whatsapp:hover {
+  color: #5be58a;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   BENEFICIOS
+========================= */
+
+.beneficios {
+  padding: 90px 8%;
+
+  background: #0b0b0b;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+.beneficio {
+  text-align: center;
+
+  padding: 40px 25px;
+
+  background: linear-gradient(
+    145deg,
+    #151515,
+    #0d0d0d
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 16px;
+
+  transition: 0.3s;
+}
+
+.beneficio:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(33, 150, 243, 0.5);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+/* iconos */
+
+.beneficio span {
+  display: inline-flex;
+
+  width: 70px;
+  height: 70px;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 35px;
+
+  background: rgba(33, 150, 243, 0.1);
+
+  border-radius: 50%;
+
+  margin-bottom: 18px;
+}
+
+
+/* títulos */
+
+.beneficio h3 {
+  font-size: 21px;
+
+  margin-bottom: 12px;
+}
+
+
+/* texto */
+
+.beneficio p {
+  color: #999;
+
+  line-height: 1.6;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 768px) {
+
+  .encabezado {
+    padding: 0 20px;
+  }
+
+  .encabezado h1 {
+    font-size: 18px;
+  }
+
+
+  .hero {
+    min-height: 600px;
+
+    padding: 80px 25px;
+
+    align-items: center;
+  }
+
+
+  .hero h2 {
+    font-size: 48px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .descripcion {
+    font-size: 16px;
+  }
+
+
+  .boton {
+    width: 100%;
+
+    text-align: center;
+  }
+
+
+  .whatsapp {
+    display: block;
+
+    margin-left: 0;
+
+    margin-top: 20px;
+
+    text-align: center;
+  }
+
+
+  .beneficios {
+    padding: 60px 20px;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  .beneficio {
+    margin-bottom: 0;
+  }
+
+}
+
+
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
+
+@media (max-width: 400px) {
+
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  .etiqueta {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+  }
+
+}
