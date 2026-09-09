@@ -811,13 +811,13 @@ text-align: center;
 }
 
 .extras-contenedor {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
 
-  gap: 25px;
+  gap: 15px;
 }
 
 .extra {
@@ -829,28 +829,33 @@ text-align: center;
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  border-radius: 18px;
+  border-radius: 14px;
 
-  padding: 30px;
+  padding: 22px 28px;
 
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   transition: 0.3s;
 }
 
 .extra:hover {
-  transform: translateY(-7px);
+  transform: translateX(5px);
 
   border-color: rgba(33, 150, 243, 0.5);
 
   box-shadow:
-    0 20px 45px rgba(0, 0, 0, 0.5);
+    0 15px 35px rgba(0, 0, 0, 0.5);
 }
+
+
+/* INFORMACIÓN DEL EXTRA */
 
 .extra h3 {
   font-size: 19px;
 
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 
   letter-spacing: 0.5px;
 }
@@ -860,17 +865,22 @@ text-align: center;
 
   font-size: 14px;
 
-  margin-bottom: 8px;
+  margin: 0;
 }
+
+
+/* PRECIO */
 
 .extra .precio {
   color: #ffcc00;
 
-  font-size: 32px;
+  font-size: 30px;
 
   font-weight: 900;
 
-  margin-top: 8px;
+  margin: 0;
+
+  white-space: nowrap;
 }
 
 
@@ -885,12 +895,25 @@ text-align: center;
   }
 
   .extras-contenedor {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 12px;
   }
 
   .extra {
-    padding: 25px;
+    padding: 20px;
+
+    gap: 15px;
+  }
+
+  .extra h3 {
+    font-size: 16px;
+  }
+
+  .extra p {
+    font-size: 13px;
+  }
+
+  .extra .precio {
+    font-size: 24px;
   }
 
 }
