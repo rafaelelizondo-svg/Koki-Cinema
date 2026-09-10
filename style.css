@@ -1532,3 +1532,96 @@ text-align: center;
   }
 
 }
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+  padding: 90px 8%;
+  background: #0b0b0b;
+}
+
+.contacto-contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contacto-info {
+  text-align: center;
+
+  padding: 50px 35px;
+
+  background: linear-gradient(
+    145deg,
+    #151515,
+    #0c0c0c
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.contacto-info h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.contacto-info p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+
+  color: #999;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.contacto-info .boton {
+  background: #25d366;
+
+  box-shadow:
+    0 10px 30px rgba(37, 211, 102, 0.2);
+}
+
+.contacto-info .boton:hover {
+  background: #5be58a;
+
+  box-shadow:
+    0 15px 35px rgba(37, 211, 102, 0.35);
+}
+
+
+/* =========================
+   CONTACTO EN CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+  .contacto {
+    padding: 70px 20px;
+  }
+
+  .contacto-info {
+    padding: 40px 20px;
+  }
+
+  .contacto-info h3 {
+    font-size: 22px;
+  }
+
+  .contacto-info p {
+    font-size: 15px;
+  }
+
+  .contacto-info .boton {
+    width: 100%;
+    text-align: center;
+  }
+
+}
