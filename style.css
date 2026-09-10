@@ -70,6 +70,10 @@ body {
    HERO
 ========================= */
 
+/* =========================
+   HERO
+========================= */
+
 .hero {
   min-height: 650px;
 
@@ -85,42 +89,74 @@ body {
   background:
     radial-gradient(
       circle at 78% 45%,
-      rgba(33, 150, 243, 0.28),
-      transparent 30%
+      rgba(33, 150, 243, 0.38),
+      transparent 32%
     ),
     radial-gradient(
-      circle at 20% 80%,
-      rgba(255, 204, 0, 0.07),
-      transparent 25%
+      circle at 10% 90%,
+      rgba(255, 204, 0, 0.12),
+      transparent 28%
     ),
     linear-gradient(
       135deg,
       #020202 0%,
-      #07090c 45%,
-      #0b141c 100%
+      #05080c 45%,
+      #0b1722 100%
     );
 }
-
 /* efecto de luz cinematográfica */
+
+/* LUZ PRINCIPAL */
 
 .hero::before {
   content: "";
 
   position: absolute;
 
-  width: 600px;
-  height: 600px;
+  width: 650px;
+  height: 650px;
 
   right: -180px;
-  top: 20px;
+  top: -20px;
 
-  background: rgba(33, 150, 243, 0.18);
+  background: rgba(33, 150, 243, 0.25);
 
   border-radius: 50%;
 
-  filter: blur(110px);
+  filter: blur(100px);
 
-  opacity: 0.9;
+  opacity: 1;
+
+  pointer-events: none;
+}
+/* HAZ DE LUZ DEL PROYECTOR */
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 850px;
+  height: 280px;
+
+  right: -180px;
+  top: 170px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(33, 150, 243, 0.18) 45%,
+    rgba(33, 150, 243, 0.30) 65%,
+    transparent 100%
+  );
+
+  transform: rotate(-20deg);
+
+  filter: blur(25px);
+
+  opacity: 1;
+
+  pointer-events: none;
 }
 
 
