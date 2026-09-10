@@ -1625,3 +1625,104 @@ text-align: center;
   }
 
 }
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  padding: 60px 8% 30px;
+
+  background: #050505;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-contenido {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.footer h2 {
+  font-size: 28px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+}
+
+.footer-contenido p {
+  color: #777;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 25px;
+}
+
+.footer-whatsapp {
+  display: inline-block;
+
+  color: #25d366;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.footer-whatsapp:hover {
+  color: #5be58a;
+
+  transform: translateY(-2px);
+}
+
+.footer-line {
+  max-width: 700px;
+
+  height: 1px;
+
+  margin: 40px auto 25px;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-copy {
+  color: #555;
+
+  font-size: 12px;
+
+  margin: 0;
+}
+
+
+/* =========================
+   FOOTER EN CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 50px 20px 25px;
+  }
+
+  .footer h2 {
+    font-size: 23px;
+  }
+
+  .footer-contenido p {
+    font-size: 11px;
+
+    line-height: 1.6;
+  }
+
+  .footer-whatsapp {
+    font-size: 14px;
+  }
+
+}
