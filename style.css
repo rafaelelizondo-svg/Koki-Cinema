@@ -84,18 +84,22 @@ body {
 
   background:
     radial-gradient(
-      circle at 75% 40%,
-      rgba(33, 150, 243, 0.22),
-      transparent 35%
+      circle at 78% 45%,
+      rgba(33, 150, 243, 0.28),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 204, 0, 0.07),
+      transparent 25%
     ),
     linear-gradient(
       135deg,
-      #050505 0%,
-      #0a0a0a 50%,
-      #101820 100%
+      #020202 0%,
+      #07090c 45%,
+      #0b141c 100%
     );
 }
-
 
 /* efecto de luz cinematográfica */
 
@@ -104,17 +108,45 @@ body {
 
   position: absolute;
 
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
 
   right: -180px;
-  top: 50px;
+  top: 20px;
 
-  background: rgba(33, 150, 243, 0.12);
+  background: rgba(33, 150, 243, 0.18);
 
   border-radius: 50%;
 
-  filter: blur(100px);
+  filter: blur(110px);
+
+  opacity: 0.9;
+}
+
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 300px;
+
+  right: -100px;
+  top: 150px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(33, 150, 243, 0.08),
+    transparent
+  );
+
+  transform: rotate(-18deg);
+
+  filter: blur(35px);
+
+  opacity: 0.8;
 }
 
 
