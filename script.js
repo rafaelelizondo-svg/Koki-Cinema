@@ -1,10 +1,13 @@
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
-menuBtn.onclick = function () {
-  navMenu.classList.toggle("active");
-};
+if (menuBtn && navMenu) {
 
+  menuBtn.onclick = function () {
+    navMenu.classList.toggle("active");
+  };
+
+}
 // =========================
 // CONVERSOR DE PIES A METROS
 // =========================
