@@ -2440,3 +2440,173 @@ text-align: center;
   }
 
 }
+/* =========================
+   OBJETOS DE CINE FLOTANTES
+========================= */
+
+.flotantes-cine {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  z-index: 5;
+}
+
+.objeto-cine {
+  position: absolute;
+
+  display: block;
+
+  font-size: 42px;
+
+  opacity: 0.22;
+
+  filter:
+    drop-shadow(0 0 8px rgba(33, 150, 243, 0.65))
+    drop-shadow(0 0 18px rgba(33, 150, 243, 0.25));
+
+  animation:
+    flotar-cine 12s ease-in-out infinite;
+
+  user-select: none;
+}
+
+/* POSICIONES Y TAMAÑOS */
+
+.objeto-1 {
+  left: 7%;
+  top: 15%;
+  font-size: 52px;
+  animation-duration: 14s;
+}
+
+.objeto-2 {
+  left: 22%;
+  top: 42%;
+  font-size: 44px;
+  animation-duration: 11s;
+  animation-delay: -3s;
+}
+
+.objeto-3 {
+  left: 75%;
+  top: 20%;
+  font-size: 58px;
+  animation-duration: 16s;
+  animation-delay: -5s;
+}
+
+.objeto-4 {
+  left: 88%;
+  top: 60%;
+  font-size: 48px;
+  animation-duration: 13s;
+  animation-delay: -2s;
+}
+
+.objeto-5 {
+  left: 45%;
+  top: 75%;
+  font-size: 42px;
+  animation-duration: 15s;
+  animation-delay: -7s;
+}
+
+.objeto-6 {
+  left: 60%;
+  top: 35%;
+  font-size: 50px;
+  animation-duration: 12s;
+  animation-delay: -4s;
+}
+
+.objeto-7 {
+  left: 12%;
+  top: 80%;
+  font-size: 30px;
+  animation-duration: 10s;
+  animation-delay: -6s;
+}
+
+.objeto-8 {
+  left: 82%;
+  top: 10%;
+  font-size: 38px;
+  animation-duration: 17s;
+  animation-delay: -8s;
+}
+
+.objeto-9 {
+  left: 35%;
+  top: 12%;
+  font-size: 36px;
+  animation-duration: 13s;
+  animation-delay: -1s;
+}
+
+.objeto-10 {
+  left: 92%;
+  top: 35%;
+  font-size: 40px;
+  animation-duration: 15s;
+  animation-delay: -9s;
+}
+
+.objeto-11 {
+  left: 5%;
+  top: 55%;
+  font-size: 34px;
+  animation-duration: 11s;
+  animation-delay: -5s;
+}
+
+.objeto-12 {
+  left: 55%;
+  top: 88%;
+  font-size: 46px;
+  animation-duration: 16s;
+  animation-delay: -3s;
+}
+
+/* MOVIMIENTO SUAVE */
+
+@keyframes flotar-cine {
+
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-25px) rotate(5deg);
+  }
+
+  50% {
+    transform: translateY(10px) rotate(-5deg);
+  }
+
+  75% {
+    transform: translateY(-35px) rotate(4deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+}
+
+/* AJUSTE PARA CELULARES */
+
+@media (max-width: 768px) {
+
+  .objeto-cine {
+    font-size: 32px;
+    opacity: 0.18;
+  }
+
+}
