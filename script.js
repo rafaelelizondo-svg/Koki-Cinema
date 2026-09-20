@@ -220,6 +220,39 @@ if (
       mostrarFoto();
 
     }
+    /* =========================
+   ANIMACIONES AL HACER SCROLL
+========================= */
+
+const elementosAnimados =
+  document.querySelectorAll(".animar-scroll");
+
+const observadorScroll = new IntersectionObserver(
+  (elementos) => {
+
+    elementos.forEach((elemento) => {
+
+      if (elemento.isIntersecting) {
+
+        elemento.target.classList.add("visible");
+
+        observadorScroll.unobserve(elemento.target);
+
+      }
+
+    });
+
+  },
+  {
+    threshold: 0.15
+  }
+);
+
+elementosAnimados.forEach((elemento) => {
+
+  observadorScroll.observe(elemento);
+
+});
 
   });
 
