@@ -1,3 +1,7 @@
+// =========================
+// MENÚ
+// =========================
+
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
@@ -8,6 +12,8 @@ if (menuBtn && navMenu) {
   };
 
 }
+
+
 // =========================
 // CONVERSOR DE PIES A METROS
 // =========================
@@ -34,26 +40,37 @@ function convertirPies() {
   resultado.textContent =
     metros.toFixed(2) + " metros";
 }
-/* =========================
-   VISOR DE GALERÍA
-========================= */
 
-const fotosGaleria = document.querySelectorAll(".galeria-foto img");
 
-const visorGaleria = document.getElementById("visorGaleria");
-const visorImagen = document.getElementById("visorImagen");
+// =========================
+// VISOR DE GALERÍA
+// =========================
 
-const visorCerrar = document.getElementById("visorCerrar");
-const visorAnterior = document.getElementById("visorAnterior");
-const visorSiguiente = document.getElementById("visorSiguiente");
+const fotosGaleria =
+  document.querySelectorAll(".galeria-foto img");
+
+const visorGaleria =
+  document.getElementById("visorGaleria");
+
+const visorImagen =
+  document.getElementById("visorImagen");
+
+const visorCerrar =
+  document.getElementById("visorCerrar");
+
+const visorAnterior =
+  document.getElementById("visorAnterior");
+
+const visorSiguiente =
+  document.getElementById("visorSiguiente");
 
 let fotoActual = 0;
 
 
-/* =========================
-   COMPROBAR QUE EXISTE
-   LA GALERÍA
-========================= */
+// =========================
+// COMPROBAR QUE EXISTE
+// LA GALERÍA
+// =========================
 
 if (
   fotosGaleria.length > 0 &&
@@ -65,9 +82,9 @@ if (
 ) {
 
 
-  /* =========================
-     ABRIR FOTOGRAFÍA
-  ========================= */
+  // =========================
+  // ABRIR FOTOGRAFÍA
+  // =========================
 
   fotosGaleria.forEach((foto, index) => {
 
@@ -86,9 +103,9 @@ if (
   });
 
 
-  /* =========================
-     MOSTRAR FOTOGRAFÍA
-  ========================= */
+  // =========================
+  // MOSTRAR FOTOGRAFÍA
+  // =========================
 
   function mostrarFoto() {
 
@@ -101,9 +118,9 @@ if (
   }
 
 
-  /* =========================
-     SIGUIENTE
-  ========================= */
+  // =========================
+  // SIGUIENTE
+  // =========================
 
   visorSiguiente.addEventListener("click", () => {
 
@@ -118,9 +135,9 @@ if (
   });
 
 
-  /* =========================
-     ANTERIOR
-  ========================= */
+  // =========================
+  // ANTERIOR
+  // =========================
 
   visorAnterior.addEventListener("click", () => {
 
@@ -135,9 +152,9 @@ if (
   });
 
 
-  /* =========================
-     CERRAR
-  ========================= */
+  // =========================
+  // CERRAR
+  // =========================
 
   function cerrarVisor() {
 
@@ -154,10 +171,10 @@ if (
   );
 
 
-  /* =========================
-     CERRAR AL HACER CLIC
-     FUERA DE LA FOTO
-  ========================= */
+  // =========================
+  // CERRAR AL HACER CLIC
+  // FUERA DE LA FOTO
+  // =========================
 
   visorGaleria.addEventListener("click", (e) => {
 
@@ -170,9 +187,9 @@ if (
   });
 
 
-  /* =========================
-     TECLADO
-  ========================= */
+  // =========================
+  // TECLADO
+  // =========================
 
   document.addEventListener("keydown", (e) => {
 
@@ -183,7 +200,7 @@ if (
     }
 
 
-    /* ESC */
+    // ESC
 
     if (e.key === "Escape") {
 
@@ -192,7 +209,7 @@ if (
     }
 
 
-    /* FLECHA DERECHA */
+    // FLECHA DERECHA
 
     if (e.key === "ArrowRight") {
 
@@ -207,7 +224,7 @@ if (
     }
 
 
-    /* FLECHA IZQUIERDA */
+    // FLECHA IZQUIERDA
 
     if (e.key === "ArrowLeft") {
 
@@ -220,33 +237,43 @@ if (
       mostrarFoto();
 
     }
-    /* =========================
-   ANIMACIONES AL HACER SCROLL
-========================= */
+
+  });
+
+}
+
+
+// =========================
+// ANIMACIONES AL HACER SCROLL
+// =========================
 
 const elementosAnimados =
   document.querySelectorAll(".animar-scroll");
 
-const observadorScroll = new IntersectionObserver(
-  (elementos) => {
+const observadorScroll =
+  new IntersectionObserver(
+    (elementos) => {
 
-    elementos.forEach((elemento) => {
+      elementos.forEach((elemento) => {
 
-      if (elemento.isIntersecting) {
+        if (elemento.isIntersecting) {
 
-        elemento.target.classList.add("visible");
+          elemento.target.classList.add("visible");
 
-        observadorScroll.unobserve(elemento.target);
+          observadorScroll.unobserve(
+            elemento.target
+          );
 
-      }
+        }
 
-    });
+      });
 
-  },
-  {
-    threshold: 0.15
-  }
-);
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
 
 elementosAnimados.forEach((elemento) => {
 
