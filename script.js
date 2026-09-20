@@ -253,7 +253,3 @@ elementosAnimados.forEach((elemento) => {
   observadorScroll.observe(elemento);
 
 });
-
-  });
-
-}
