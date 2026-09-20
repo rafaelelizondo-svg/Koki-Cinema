@@ -2600,7 +2600,7 @@ text-align: center;
 ========================= */
 
 .animar-scroll {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(35px);
 
   transition:
