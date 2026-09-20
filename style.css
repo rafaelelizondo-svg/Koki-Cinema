@@ -208,6 +208,9 @@ body {
   letter-spacing: 3px;
 
   margin-bottom: 25px;
+
+  text-shadow:
+    0 0 10px rgba(255, 204, 0, 0.15);
 }
 
 
