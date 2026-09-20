@@ -50,104 +50,62 @@ const visorSiguiente = document.getElementById("visorSiguiente");
 let fotoActual = 0;
 
 
-/* Abrir fotografía */
+/* =========================
+   COMPROBAR QUE EXISTE
+   LA GALERÍA
+========================= */
 
-fotosGaleria.forEach((foto, index) => {
+if (
+  fotosGaleria.length > 0 &&
+  visorGaleria &&
+  visorImagen &&
+  visorCerrar &&
+  visorAnterior &&
+  visorSiguiente
+) {
 
-  foto.addEventListener("click", () => {
 
-    fotoActual = index;
+  /* =========================
+     ABRIR FOTOGRAFÍA
+  ========================= */
 
-    mostrarFoto();
+  fotosGaleria.forEach((foto, index) => {
 
-    visorGaleria.classList.add("activo");
+    foto.addEventListener("click", () => {
 
-    document.body.style.overflow = "hidden";
+      fotoActual = index;
+
+      mostrarFoto();
+
+      visorGaleria.classList.add("activo");
+
+      document.body.style.overflow = "hidden";
+
+    });
 
   });
 
-});
 
+  /* =========================
+     MOSTRAR FOTOGRAFÍA
+  ========================= */
 
-/* Mostrar fotografía */
+  function mostrarFoto() {
 
-function mostrarFoto() {
+    visorImagen.src =
+      fotosGaleria[fotoActual].src;
 
-  visorImagen.src = fotosGaleria[fotoActual].src;
+    visorImagen.alt =
+      fotosGaleria[fotoActual].alt;
 
-  visorImagen.alt = fotosGaleria[fotoActual].alt;
-
-}
-
-
-/* Siguiente */
-
-visorSiguiente.addEventListener("click", () => {
-
-  fotoActual++;
-
-  if (fotoActual >= fotosGaleria.length) {
-    fotoActual = 0;
   }
 
-  mostrarFoto();
 
-});
+  /* =========================
+     SIGUIENTE
+  ========================= */
 
-
-/* Anterior */
-
-visorAnterior.addEventListener("click", () => {
-
-  fotoActual--;
-
-  if (fotoActual < 0) {
-    fotoActual = fotosGaleria.length - 1;
-  }
-
-  mostrarFoto();
-
-});
-
-
-/* Cerrar */
-
-function cerrarVisor() {
-
-  visorGaleria.classList.remove("activo");
-
-  document.body.style.overflow = "";
-
-}
-
-
-visorCerrar.addEventListener("click", cerrarVisor);
-
-
-/* Cerrar haciendo clic fuera de la fotografía */
-
-visorGaleria.addEventListener("click", (e) => {
-
-  if (e.target === visorGaleria) {
-    cerrarVisor();
-  }
-
-});
-
-
-/* Teclado */
-
-document.addEventListener("keydown", (e) => {
-
-  if (!visorGaleria.classList.contains("activo")) {
-    return;
-  }
-
-  if (e.key === "Escape") {
-    cerrarVisor();
-  }
-
-  if (e.key === "ArrowRight") {
+  visorSiguiente.addEventListener("click", () => {
 
     fotoActual++;
 
@@ -157,9 +115,14 @@ document.addEventListener("keydown", (e) => {
 
     mostrarFoto();
 
-  }
+  });
 
-  if (e.key === "ArrowLeft") {
+
+  /* =========================
+     ANTERIOR
+  ========================= */
+
+  visorAnterior.addEventListener("click", () => {
 
     fotoActual--;
 
@@ -169,6 +132,95 @@ document.addEventListener("keydown", (e) => {
 
     mostrarFoto();
 
+  });
+
+
+  /* =========================
+     CERRAR
+  ========================= */
+
+  function cerrarVisor() {
+
+    visorGaleria.classList.remove("activo");
+
+    document.body.style.overflow = "";
+
   }
 
-});
+
+  visorCerrar.addEventListener(
+    "click",
+    cerrarVisor
+  );
+
+
+  /* =========================
+     CERRAR AL HACER CLIC
+     FUERA DE LA FOTO
+  ========================= */
+
+  visorGaleria.addEventListener("click", (e) => {
+
+    if (e.target === visorGaleria) {
+
+      cerrarVisor();
+
+    }
+
+  });
+
+
+  /* =========================
+     TECLADO
+  ========================= */
+
+  document.addEventListener("keydown", (e) => {
+
+    if (
+      !visorGaleria.classList.contains("activo")
+    ) {
+      return;
+    }
+
+
+    /* ESC */
+
+    if (e.key === "Escape") {
+
+      cerrarVisor();
+
+    }
+
+
+    /* FLECHA DERECHA */
+
+    if (e.key === "ArrowRight") {
+
+      fotoActual++;
+
+      if (fotoActual >= fotosGaleria.length) {
+        fotoActual = 0;
+      }
+
+      mostrarFoto();
+
+    }
+
+
+    /* FLECHA IZQUIERDA */
+
+    if (e.key === "ArrowLeft") {
+
+      fotoActual--;
+
+      if (fotoActual < 0) {
+        fotoActual = fotosGaleria.length - 1;
+      }
+
+      mostrarFoto();
+
+    }
+
+  });
+
+}
