@@ -2538,8 +2538,10 @@ text-align: center;
 /* Ícono */
 
 .whatsapp-icon {
-  font-size: 23px;
-  line-height: 1;
+  width: 24px;
+  height: 24px;
+  fill: white;
+  flex-shrink: 0;
 }
 
 /* Efecto al pasar el mouse */
@@ -2584,9 +2586,10 @@ text-align: center;
     border-radius: 50%;
   }
 
-  .whatsapp-icon {
-    font-size: 25px;
-  }
+ .whatsapp-icon {
+  width: 27px;
+  height: 27px;
+}
 
   .whatsapp-texto {
     display: none;
