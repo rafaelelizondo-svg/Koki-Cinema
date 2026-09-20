@@ -2675,3 +2675,39 @@ text-align: center;
   box-shadow:
     0 8px 22px rgba(33, 150, 243, 0.25);
 }
+
+/* =========================
+   ETIQUETA MÁS POPULAR
+========================= */
+
+.paquete-etiqueta {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: rgba(33, 150, 243, 0.12);
+
+  border: 1px solid rgba(33, 150, 243, 0.45);
+
+  color: #ffcc00;
+
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+
+  box-shadow:
+    0 0 12px rgba(33, 150, 243, 0.12);
+
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.paquete:hover .paquete-etiqueta {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 18px rgba(33, 150, 243, 0.25);
+}
